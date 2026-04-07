@@ -3,117 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebnem | Robotics & Computer Vision Researcher</title>
+    <title>Sebnem | Robotics & Computer Vision</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0b0f1a; color: #e2e8f0; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-gradient { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); }
-        .tech-tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@300;400;600&display=swap');
+        
+        body { 
+            font-family: 'Noto Sans', sans-serif; 
+            background-color: #ffffff; 
+            color: #374151;
+        }
+        h1, h2, h3 { 
+            font-family: 'Google Sans', sans-serif; 
+        }
+        .paper-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .paper-card:hover {
+            border-color: #3b82f6;
+            background: #ffffff;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: -4px; left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
     </style>
 </head>
-<body class="leading-relaxed">
+<body class="antialiased">
 
-    <nav class="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center">
-        <span class="font-bold text-xl tracking-tight text-white underline decoration-sky-500">SEBNEM.IO</span>
-        <div class="space-x-6 text-sm font-medium text-slate-400">
-            <a href="#about" class="hover:text-sky-400 transition">About</a>
-            <a href="#research" class="hover:text-sky-400 transition">Research</a>
-            <a href="#hardware" class="hover:text-sky-400 transition">Hardware</a>
+    <nav class="max-w-4xl mx-auto px-6 py-10 flex justify-between items-center">
+        <h2 class="text-xl font-bold tracking-tighter text-gray-900">SEBNEM<span class="text-blue-600">.IO</span></h2>
+        <div class="space-x-8 text-sm">
+            <a href="#research" class="nav-link text-gray-600 hover:text-blue-600">Research</a>
+            <a href="#publications" class="nav-link text-gray-600 hover:text-blue-600">Publications</a>
+            <a href="#hardware" class="nav-link text-gray-600 hover:text-blue-600">Hardware</a>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto px-6 pt-16 pb-24">
-        <div class="max-w-3xl">
-            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-                Pushing the limits of <span class="text-sky-400">Event-based Vision</span>
-            </h1>
-            <p class="text-xl text-slate-400 leading-relaxed">
-                Researcher specializing in **Event-based SLAM**, **Multi-sensor Fusion**, and **Autonomous Drone Navigation**. 
-                Developing real-time perception pipelines for high-speed robotic systems.
-            </p>
+    <header class="max-w-4xl mx-auto px-6 pt-12 pb-16 text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            Research in <span class="text-blue-600">Event-based SLAM</span> & Perception
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            I specialize in high-speed perception, focusing on <strong>Event Cameras</strong>, <strong>Sensor Fusion</strong>, and <strong>Autonomous Drone Navigation</strong>. My work bridges the gap between bio-inspired sensing and real-time robotic autonomy.
+        </p>
+        
+        <div class="flex justify-center gap-5 mt-8">
+            <a href="https://github.com/sebnem-byte" class="text-gray-400 hover:text-gray-900 transition text-2xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-900 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:contact@yourdomain.com" class="text-gray-400 hover:text-gray-900 transition text-2xl"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 space-y-24">
-        
-        <section id="latest" class="relative">
-            <div class="glass p-8 rounded-3xl overflow-hidden relative border-l-4 border-sky-500">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
+    <main class="max-w-4xl mx-auto px-6 space-y-20">
+
+        <section id="publications">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-b pb-2">Selected Publications</h2>
+            <div class="paper-card p-8 rounded-2xl">
+                <div class="flex flex-col md:flex-row gap-6">
                     <div class="flex-1">
-                        <span class="text-sky-500 font-bold text-sm tracking-widest uppercase">Latest Publication</span>
-                        <h2 class="text-3xl font-bold text-white mt-2 mb-4">Edge-uSLAM: Event-based Edge-driven SLAM</h2>
-                        <p class="text-slate-400 mb-6 italic">Accepted at ICRA 2026</p>
-                        <p class="text-slate-300 mb-6">A novel approach to SLAM utilizing event cameras to achieve high-frequency updates and robustness in challenging lighting conditions.</p>
-                        <a href="https://sebnem-byte.github.io/edged-uslam.github.io/" class="inline-flex items-center text-white bg-sky-600 hover:bg-sky-500 px-6 py-2 rounded-full transition font-semibold">
-                            Project Page <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
+                        <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">ICRA 2026</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mt-1 mb-3">Edge-uSLAM: Event-based Edge-driven SLAM</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                            Integrating event cameras with edge computing to achieve sub-millisecond motion tracking and robust mapping in high-dynamic-range environments.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://sebnem-byte.github.io/edged-uslam.github.io/" class="bg-gray-900 text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-600 transition">Project Page</a>
+                            <a href="#" class="border border-gray-300 text-gray-700 px-5 py-2 rounded-full text-xs font-bold hover:bg-gray-50 transition">Paper (PDF)</a>
+                            <a href="#" class="border border-gray-300 text-gray-700 px-5 py-2 rounded-full text-xs font-bold hover:bg-gray-50 transition">Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="research">
-            <h2 class="text-2xl font-bold text-white mb-10 flex items-center">
-                <span class="w-8 h-1 bg-sky-500 mr-4"></span> Research Areas
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-sky-400"><i class="fas fa-microchip mr-2"></i> Computer Vision & Deep Learning</h3>
-                    <ul class="text-slate-400 space-y-2">
-                        <li>• CNN & Encoder-Decoder Architectures</li>
-                        <li>• Self-supervised Depth Estimation</li>
-                        <li>• Real-time Feature Tracking</li>
-                    </ul>
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-b pb-2">Research Areas</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-blue-600">Computer Vision & CNNs</h4>
+                    <p class="text-sm text-gray-600">Working with CNN-based encoder-decoder architectures for depth estimation and feature extraction on neuromorphic data.</p>
                 </div>
-                <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-sky-400"><i class="fas fa-location-arrow mr-2"></i> Autonomous Navigation</h3>
-                    <ul class="text-slate-400 space-y-2">
-                        <li>• PX4 & ArduPilot Firmware Development</li>
-                        <li>• Real-time Drone Navigation & Obstacle Avoidance</li>
-                        <li>• Trajectory Optimization</li>
-                    </ul>
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-blue-600">Drone Navigation</h4>
+                    <p class="text-sm text-gray-600">Real-time implementation of SLAM on PX4 and ArduPilot stacks for autonomous high-speed flight.</p>
                 </div>
             </div>
         </section>
 
-        <section id="hardware" class="pb-24">
-            <h2 class="text-2xl font-bold text-white mb-10 flex items-center">
-                <span class="w-8 h-1 bg-sky-500 mr-4"></span> Hardware & Sensor Fusion
-            </h2>
-            <div class="glass p-8 rounded-3xl">
-                <p class="text-slate-300 mb-6">Currently designing and building <strong>custom hand-held devices</strong> for multi-modal dataset collection and real-time fusion.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="p-4 rounded-xl bg-slate-800/50">
-                        <p class="text-xs text-sky-400 font-bold mb-1 uppercase">Event Cameras</p>
-                        <p class="text-sm font-medium">Davis 346<br>Prophesee EVK4</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-slate-800/50">
-                        <p class="text-xs text-sky-400 font-bold mb-1 uppercase">RGB-D</p>
-                        <p class="text-sm font-medium">Intel D435i<br>Intel D455</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-slate-800/50">
-                        <p class="text-xs text-sky-400 font-bold mb-1 uppercase">IMU / Navigation</p>
-                        <p class="text-sm font-medium">VectorNAV<br>SBG Ellipse</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-slate-800/50">
-                        <p class="text-xs text-sky-400 font-bold mb-1 uppercase">Lidar</p>
-                        <p class="text-sm font-medium">Multi-beam<br>Integration</p>
-                    </div>
+        <section id="hardware" class="pb-20">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-b pb-2">Hardware Expertise</h2>
+            <p class="text-sm text-gray-600 mb-8">Specialized in designing <strong>hand-held devices</strong> for synchronized multi-modal data collection.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100 italic">
+                    <strong class="text-gray-900 not-italic uppercase text-xs block mb-1">Event Systems:</strong> Davis 346, Prophesee EVK4
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100 italic">
+                    <strong class="text-gray-900 not-italic uppercase text-xs block mb-1">Optical/Depth:</strong> Intel RealSense D435i, D455, LiDAR
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100 italic">
+                    <strong class="text-gray-900 not-italic uppercase text-xs block mb-1">Navigation IMU:</strong> VectorNAV, SBG Ellipse
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100 italic">
+                    <strong class="text-gray-900 not-italic uppercase text-xs block mb-1">Autopilot:</strong> PX4 & ArduPilot Real-time Control
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <div class="flex justify-center space-x-6 mb-4 text-xl">
-            <a href="https://github.com/sebnem-byte" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p>© 2026 Sebnem. Built for Robotics Performance.</p>
+    <footer class="max-w-4xl mx-auto px-6 py-12 border-t border-gray-100 text-center text-gray-400 text-xs tracking-widest uppercase">
+        © 2026 Sebnem · Robotics Performance Research
     </footer>
 
 </body>
