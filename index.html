@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researcher Portfolio | Event-based SLAM & Robotics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid #334155; }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <header class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-5xl font-extrabold mb-4">Hi, I'm <span class="gradient-text">Academic & Robotics Engineer</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+            Focusing on Event-based Vision, High-Speed SLAM, and Real-time Sensor Fusion for Autonomous Systems.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-16">
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-sky-500 pl-4">Core Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-camera-retro text-sky-400 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Event-based Vision</h3>
+                    <p class="text-sm text-slate-400">Event-based SLAM, Neuromorphic Vision, and sub-millisecond perception pipelines.</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-brain text-purple-400 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Computer Vision</h3>
+                    <p class="text-sm text-slate-400">CNNs, Encoder-Decoder architectures, and Self-supervised Depth Estimation.</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-drone text-emerald-400 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Drone Navigation</h3>
+                    <p class="text-sm text-slate-400">Real-time applications on PX4 and ArduPilot for autonomous flight.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="card p-8 rounded-2xl border-sky-500/30">
+                <h2 class="text-2xl font-bold mb-4 text-sky-400">Current Work: Sensor Fusion</h2>
+                <p class="mb-4 text-slate-300">Developing a <strong>Hand-held Device Design</strong> for multi-modal sensor fusion and large-scale dataset collection.</p>
+                <ul class="space-y-2 text-sm">
+                    <li><span class="text-sky-500">✔</span> <strong>Event:</strong> Davis 346, Prophesee EVK4</li>
+                    <li><span class="text-sky-500">✔</span> <strong>RGB-D:</strong> Intel RealSense D435i, D455</li>
+                    <li><span class="text-sky-500">✔</span> <strong>IMU:</strong> VectorNAV, SBG Ellipse</li>
+                    <li><span class="text-sky-500">✔</span> <strong>Lidar:</strong> Multi-beam LiDAR Integration</li>
+                </ul>
+            </div>
+            
+            <div class="card p-8 rounded-2xl border-purple-500/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-purple-600 text-xs px-3 py-1 font-bold">LATEST PUB</div>
+                <h2 class="text-2xl font-bold mb-4">Featured Publication</h2>
+                <h3 class="font-bold text-slate-200">Edge-uSLAM: Event-based Edge-driven SLAM</h3>
+                <p class="text-sm text-slate-400 mt-2">Accepted at <strong>ICRA 2026</strong> (or relevant year).</p>
+                <a href="https://sebnem-byte.github.io/edged-uslam.github.io/" target="_blank" class="inline-block mt-6 px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-full text-sm font-bold transition">View Paper Page</a>
+            </div>
+        </section>
+
+        <section class="text-center pb-20">
+            <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
+            <div class="flex justify-center space-x-6 text-3xl">
+                <a href="#" class="hover:text-sky-400"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-sky-400"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-sky-400"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
